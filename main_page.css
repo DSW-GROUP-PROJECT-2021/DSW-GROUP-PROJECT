@@ -1,0 +1,179 @@
+body{
+background-image: url("background-image.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+margin: 0 auto;
+}
+
+nav {
+
+  width: auto;
+  height: 18vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:white;
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+a {
+text-decoration: none;
+color:white;
+font-family: Arial, sans-serif;
+text-transform: uppercase;
+}
+
+a:hover{
+text-decoration:underline;
+color:blue;
+font-weight: bold;
+
+}
+
+
+
+#sign_up_in{
+background-color: rgb(34, 189, 236);
+float: right;
+font-size: 18px;
+color:white;
+border-width: 25px 10px 4px 35px;
+border-radius: 10px;
+text-align: center;
+padding-top: 10px;
+padding-right: 10px;
+padding-bottom: 10px;
+padding-left: 10px;
+margin: 20px auto;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+#sign_up_in:hover{
+opacity: 1;
+background-color: rgb(161, 208, 224);
+color: white;
+}
+
+
+img{
+	width:350px;
+  height:200px;
+	margin:-10px;
+  right: 0;
+
+}
+
+.scrollmenu{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+
+.contact{
+  position: fixed;
+  padding: 0 1px 10px 1px;
+  right: 18px;
+  font-size: 12px;
+  width: 35%;
+  display: flex;
+  justify-content: space-around;
+  color:white;
+  font-weight: normal;
+  font-family:Roundhand, cursive;
+
+
+}
+
+.contact:hover{
+  text-decoration:underline;
+  opacity: 1;
+}
+
+
+#about{
+ position: fixed;
+  padding: 0 1px 10px 1px;
+  text-align: left;
+  font-size: 12px;
+  width: 35%;
+  color:white;
+  margin: 10px;
+  font-weight: normal;
+  font-family:Roundhand, cursive;
+  
+
+}
+.socials-icon{
+  position: fixed;
+  padding: 0 1px 10px 1px;
+  text-align: center;
+  width: 110%;
+  color:white;
+}
+
+
+.fa {
+  padding: 10px 10px 10px 10px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  -moz-border-radius: 60%;
+  -webkit-border-radius: 60%;
+  border-radius: 50%;
+  -moz-box-shadow: 0px 0px 2px #888;
+  -webkit-box-shadow: 0px 0px 2px #888;
+  box-shadow: 0px 0px 2px #888;
+  text-decoration: none;
+  text-align: center;
+}
+
+.fa:hover {
+  opacity: 1;
+  background-color: rgb(8, 7, 8);
+  color: white;
+}
+
+.fa-facebook {
+  background: blue;
+  opacity: 1;
+  color: white;
+  text-align: center;
+}
+
+.fa-twitter {
+  background: blue;
+  opacity: 1;
+  color: white;
+  text-align: center;
+}
+
+.fa-instagram {
+  background: blue;
+  opacity: 1;
+  color: white;
+  text-align: center;
+}
+
+footer{
+background-color:#191970;
+width: 100%;
+height: 150px;
+font-size: 20px;
+position: fixed;
+bottom:0;
+padding: 5px 10px 10px 10px;
+
+}
+
+
+
+
+
+
+
+
+

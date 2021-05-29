@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>SIGN UP</title>
+<style>
+.main_section{
+background-color:#01015f;
+font-family:'Courier New', Courier, monospace;
+margin: auto;
+padding-left:5px;
+padding-right:25px;
+padding-top:25px;
+padding-bottom:25px;
+width:600px;
+height:500PX;
+overflow:hidden;
+padding-bottom:20px;
+margin-left:auto;
+margin-top:auto;
+margin-bottom:auto; 
+margin-right:auto; 
+border-radius:10px;
+color:#fafafa;
+font-family:'Times New Roman', Times, serif
+}
+
+h3{
+text-align: center;
+font-weight:bold;
+}
+
+.main_section table{
+font-family: cursive;
+}
+
+
+.main_section .tb{
+font-weight:normal;
+opacity:1;
+height:25px;
+width:260px;
+border:2px solid #fc8144;
+color:black;
+border-radius:10px;
+font-family:'Times New Roman', Times, serif
+
+}
+
+
+.main_section.tb:focus{
+height:25px;
+border:2px solid #db5c1d;
+border-left:5px solid #f3eaea;
+}
+
+
+.main_section .buttons{
+background-color:#f5dada;
+width:260px;
+height:30px;
+color:#5814f8;
+font-weight:normal;
+border:1px solid #b94d17; 
+text-shadow: 1px 1px 1px rgb(236, 214, 214);
+border-radius: 3px;
+font-weight: 550;
+color: #240496;
+font-size:18px;
+-webkit-transition: 2s;
+-moz-transition: 2s;
+transition: 2s;
+border-radius:10px;
+font-family:'Times New Roman', Times, serif
+
+}
+
+
+.main_section .buttons:hover{
+background-color:#3c1ad3;
+border-radius: 2px;
+color:#fffcfc;
+border:4px solid #050000;
+-webkit-transition: 0.9s;
+-moz-transition: 0.9s;
+transition: 0.9s; 
+border-radius:10px;
+font-family:'Times New Roman', Times, serif
+}
+</style>
+</head>
+<body>
+     
+      <form action="connection.php" method="post" class="main_section">
+		  <div class="header-tag">
+		  <h3>Create SIGN UP <br>Registration-Form</h3>
+		  <hr>
+		  </div>
+  
+		  <div class="login">
+			  <table cellspacing="2" align="center" cellpadding="9" border="0">
+				  <tr>
+					  <td align="right">Enter-Name :</td>
+					  <td><input name="fullname" type="text" placeholder="Name" id="table_1" class="tb" /></td>
+				  </tr>
+			  <tr>
+				  <td align="right">Enter-Email :</td>
+				  <td><input name="email" type="text" placeholder=" Email " id="table_2" class="tb" /></td>
+			  </tr>
+			  <tr>
+				  <td align="right">Enter-Username :</td>
+				  <td><input name="username" type="text" placeholder="Username" id="table_3" class="tb" /></td>
+			  </tr>
+			  <tr>
+				  <td align="right">Enter-Password :</td>
+				  <td><input name="Password" type="password" placeholder="Password" id="table_4" class="tb" /></td>
+			  </tr>
+			  <tr>
+				  <td align="right">Confirm-Password :</td>
+				  <td><input name="Confimpassword" type="password" placeholder="Confirm Password" id="table_5" class="tb" /></td>
+			  </tr>
+			  <tr>
+			  <td></td>
+			  <td>
+			  <input type="submit" name="submit" value="CREATE ACCOUNT" class="buttons"  onclick="registrationForm()" />
+			  
+			  
+			  </tr>
+			  </table>
+		  </div>
+      </form>
+  
+
+
+<script>
+  
+function clearFunction()
+	{
+		document.getElementById("table_1").value="";
+		document.getElementById("table_2").value="";
+		document.getElementById("table_3").value="";
+		document.getElementById("table_4").value="";
+		document.getElementById("table_5").value="";
+	}
+
+ function registrationForm(){
+
+		var your_name= document.getElementById("table_1").value;
+		var Gmail= document.getElementById("table_2").value;
+		var username= document.getElementById("table_3").value;
+		var pass= document.getElementById("table_4").value;			
+		var confirm_pass= document.getElementById("table_5").value;
+		
+       
+		var password_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+		var alphabet = /^[A-Za-z]+$/;
+		var filter_character = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+		if(your_name=='')
+		{
+			alert('Please enter your name');
+		}
+		else if(!alphabet.test(your_name))
+		{
+			alert('Name field compel only alphabet characters');
+		}
+		else if(Gmail=='')
+		{
+			alert('Please enter your user email id');
+		}
+		else if (!filter_character.test(Gmail))
+		{
+			alert('Invalid email');
+		}
+		else if(username=='')
+		{
+			alert('Please enter the user name.');
+		}
+		else if(!alphabet.test(username))
+		{
+			alert('Username field compel only alphabet');
+		}
+		else if(pass=='')
+		{
+			alert('Please enter Password');
+		}
+		else if(confirm_pass=='')
+		{
+			alert('please Confirm your Password');
+		}
+		else if(!password_expression.test(pass))
+		{
+			alert ('Lower_case, Upper_case,  Special character and Number  are needed in Pass field');
+		}
+		else if(pass != confirm_pass)
+		{
+			alert ('your Password do not Matched');
+		}
+		else if(document.getElementById("table_5").value.length < 5)
+		{
+			alert ('Password minimum_length is 8');
+		}
+		else if(document.getElementById("table_5").value.length > 14)
+		{
+			alert ('Password maximum_length is 14');
+		}
+		else
+		{				                            
+      alert('YOUR ARE SUCCESSFULLY REGISTERED');
+
+		}
+	}
+      </script>
+
+
+      </body>
+      </html>
+
+
+
+
